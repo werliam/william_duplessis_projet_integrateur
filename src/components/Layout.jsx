@@ -9,9 +9,7 @@ function Layout() {
             <nav>
                 <Link to="/">TableauDeBord</Link>
                 |
-                <Link to="/listeVille">ListeVille</Link>
-                |
-                <Link to="/Ville">Ville</Link> 
+                <Link to="/rechercheVille">RechercheVille</Link>
             </nav>
 
             <main>

@@ -1,17 +1,34 @@
-# React + Vite
+# Météo multi-villes — Projet intégrateur 420-710
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Application React qui affiche la météo de villes du monde, avec une liste de villes favorites.
 
-Currently, two official plugins are available:
+Projet intégrateur du cours 420-710-AH (Cadriciel Web côté client), Collège Ahuntsic — William Duplessis.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Pages
 
-## React Compiler
+| Page | Route | Description |
+|---|---|---|
+| Tableau de bord | `/` | Affiche les villes aimées (favoris) |
+| Recherche de ville | `/rechercheVille` | Affiche 20 villes au hasard et une barre de recherche |
+| Ville | `/ville/:id` | Affiche la météo d'une ville précise, quand on clique dessus |
+| Page 404 | `*` | Page affichée quand l'adresse n'existe pas |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## API utilisées
 
-## Expanding the Oxlint configuration
+- [Open-Meteo](https://open-meteo.com/) : météo et géocodage (recherche de ville)
+- [CountriesNow](https://countriesnow.space/) : liste de villes du monde
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
-"# william_duplessis_projet_integrateur" 
+Weather data by [Open-Meteo.com](https://open-meteo.com/)
+
+## Installation locale
+
+```bash
+git clone https://github.com/werliam/william_duplessis_projet_integrateur.git
+cd william_duplessis_projet_integrateur
+npm install
+npm run dev
+```
+
+Puis ouvrir l'adresse affichée dans le terminal (par défaut http://localhost:5173).
+
+#reed me cree avec ia 👀

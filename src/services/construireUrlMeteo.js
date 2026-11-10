@@ -1,4 +1,4 @@
-import { useFetch } from "../hook/useFetch"
+import useFetch from '../hook/useFetch'
 function construireUrlMeteo({latitude,longitude,param}){
     const url  = `https://api.open-meteo.com/v1/forecast ? latitude=${latitude} & longitude=-${longitude} & current=${param.join(",")}`
     return useFetch(url)

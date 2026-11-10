@@ -18,7 +18,6 @@ Projet intégrateur du cours 420-710-AH (Cadriciel Web côté client), Collège 
 - [Open-Meteo](https://open-meteo.com/) : météo et géocodage (recherche de ville)
 - [CountriesNow](https://countriesnow.space/) : liste de villes du monde
 
-Weather data by [Open-Meteo.com](https://open-meteo.com/)
 
 ## Installation locale
 

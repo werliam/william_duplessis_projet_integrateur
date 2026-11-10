@@ -1,9 +1,11 @@
-import construireUrlMeteo from '../services/construireUrlMeteo'
 import { useState } from 'react'
+import { Link } from 'react-router'
+import useFetch from '../hook/useFetch'
+import useTimeOute from '../hook/useTimeOute'
 
 function RechercheVille() {
     const [recherche, setRecherche] = useState("")
-    const { donnees, chargement, error } = useRechercheVille(recherche)
+    const { donnees, chargement, error } = useFetch(`https://geocoding-api.open-meteo.com/v1/search?name=${useTimeOute(recherche, 500)}&count=5&language=fr`)
 
     return <>
         <h1>RechercheVille</h1>
@@ -16,7 +18,9 @@ function RechercheVille() {
             <ul>
                 {donnees.results.map((ville) => (
                     <li key={ville.id}>
-                        <Link to={"/ville/" + ville.id}>{ville.name}</Link>
+                        <Link to={`/ville/${ville.name}?lat=${ville.latitude}&lon=${ville.longitude}`}>
+                            {ville.name}, {ville.admin1} ({ville.country})
+                        </Link>
                     </li>
                 ))}
             </ul>

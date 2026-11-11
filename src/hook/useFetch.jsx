@@ -1,13 +1,18 @@
-import { useState ,useEffect } from "react";
+import { useState, useEffect } from "react";
 
-function useFetch(url){
+function useFetch(url) {
+
   const [donnees, setDonnees] = useState(null);
   const [chargement, setChargement] = useState(true);
   const [error, setError] = useState(null);
- 
+
   useEffect(() => {
+    if (!url) {
+      setChargement(false)
+      return
+    }
     const controleur = new AbortController();
- 
+
     async function charger() {
       setChargement(true);
       setError(null);
@@ -21,11 +26,11 @@ function useFetch(url){
         setChargement(false);
       }
     }
- 
+
     charger();
     return () => controleur.abort();
   }, [url]);
- 
+
   return { donnees, chargement, error };
 }
 

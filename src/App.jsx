@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import TableauDeBord from './pages/TableauDeBord'
 import Ville from './pages/Ville'
 import RechercheVille from './pages/RechercheVille'

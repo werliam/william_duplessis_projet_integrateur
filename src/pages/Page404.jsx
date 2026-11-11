@@ -1,4 +1,4 @@
-function page404(){
+function Page404(){
     return <h1>erreur 404</h1>
 }
-export default page404
+export default Page404
